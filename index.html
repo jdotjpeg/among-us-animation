@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!--
+    Ansell Jude Gadingan, 12 October 2020
+    -->
+    <meta charset='utf-8' />
+    <meta name="viewport" content="width=device-width" /> 
+    <title>My Web Page</title>
+    <style type='text/css'>
+    /* styles go here */
+        @font-face {
+            font-family: vcrMono;
+            src: url('VCR_OSD_MONO.ttf');
+        }
+        @keyframes textAnimation { 
+            from {
+                opacity: 0%;
+            }
+            to {
+                opacity: 100%;
+            }
+        }
+        @keyframes playerAnimation {
+            0% {
+                opacity: 80%;
+                transform: translateX(-400px) translateY(-90px); rotate(0deg) ;
+            }
+            100% {
+                opacity: 100%;
+                transform: translateX(320px) translateY(-90px) rotate(340deg) ;
+            }
+        }
+        @keyframes typing {
+          from { width: 0 }
+          to { width: 21em; }
+        }
+        
+        
+        body {
+            background: url(spaceBG.png);
+            background-color: black;
+            text-align: center;
+        }
+        h1#imposterText {
+            font-family: 'vcrMono', 'Trebuchet MS', sans-serif;
+            color: white;
+            font-weight: lighter;
+            
+            
+            /*overflow: hidden; 
+            white-space: nowrap; 
+            margin: 0 auto;
+            letter-spacing: .15em; 
+            animation: typing 3.5s steps(40, end);
+            */
+            
+            
+            animation-name: textAnimation;
+            animation-duration: 5s;
+            animation-delay: 0s;
+            
+        }
+        
+        /*
+        svg {
+            transform: translateX(-195px) translateY(-85px);
+            
+            animation-name: playerAnimation;
+            animation-duration: 1.5s;
+            animation-iteration-count: 1;
+            animation-fill-mode: forwards;
+        }
+        svg circle {
+            fill: white;
+        }
+        */
+        img#player{
+            width: 170px;
+            transform: translateX(-300px) translateY(-100px);
+            
+            animation-name: playerAnimation;
+            animation-duration: 3s;
+            animation-iteration-count: 1;
+            animation-fill-mode: forwards;
+            
+            
+        }
+        div#content{
+            transform: translateY(25em);
+        }
+        
+        @media screen and (min-width: 375px){
+            div#content {
+                margin: 1em auto;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+    <!-- page content will go here -->
+    <div id = 'content'>
+    <h1 id = 'imposterText'>Please go to therapy.</h1>
+    
+    <!--<svg width = '300px' height = '300px' viewBox = '0 0 300 300'>
+        <circle cx = '50' cy = '50' r = '50'/> 
+        <rect x = '25' y = '25' width = '10'
+    </svg> -->
+    
+    <img src = 'playerVibin.gif' id = 'player'/>
+    </div>
+
+
+    <footer>Copyright &copy 2020 Ansell Jude Gadingan</footer>
+    
+    <script type='text/javascript'>
+    // scripts will go here
+        
+
+    </script>
+</body>
+</html>
