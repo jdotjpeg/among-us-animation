@@ -24,7 +24,7 @@
         @keyframes playerAnimation {
             0% {
                 opacity: 80%;
-                transform: translateX(-400px) translateY(-90px); rotate(0deg) ;
+                transform: translateX(-400px) translateY(-90px) rotate(0deg) ;
             }
             100% {
                 opacity: 100%;
@@ -34,6 +34,16 @@
         @keyframes typing {
           from { width: 0 }
           to { width: 21em; }
+        }
+        
+        /* FOR MOBILE */
+        @keyframes playerAnimMobile{
+            0% {
+                transform: translateX(-10em) translateY(-7em) rotate(0deg);
+            }
+            100% {
+                transform: translateX(10em) translateY(-7em) rotate(340deg) ;
+            }
         }
         
         
@@ -90,9 +100,17 @@
             transform: translateY(25em);
         }
         
-        @media screen and (min-width: 375px){
+        @media screen and (max-width: 375px){
             div#content {
-                margin: 1em auto;
+                transform: translateY(15em);
+            }
+            img#player{
+                transform: translateX(-10em) translateY(15em);
+                
+                animation-name: playerAnimMobile;
+                animation-duration: 3s;
+                animation-iteration-count: 1;
+                animation-fill-mode: forwards;
             }
         }
 
